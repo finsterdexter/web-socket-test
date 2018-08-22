@@ -4,5 +4,4 @@ go get -u github.com/golang/dep/cmd/dep
 dep init
 dep ensure
 echo "Building..."
-go build -o websocketd
-chmod +x websocketd
+CGO_ENABLED=0 GOOS=linux go build -o websocketd
